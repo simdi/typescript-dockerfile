@@ -4,7 +4,7 @@
   "description": "This is a dockerfile that will build and run your typescript node.js project in three steps. This approach is memory efficient.",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node -r tsconfig-paths/register src/index"
+    "start": "tsc && node -r tsconfig-paths/register dist/index.js"
   },
   "repository": {
     "type": "git",

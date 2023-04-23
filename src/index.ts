@@ -1,18 +1,18 @@
 import * as dotenv from 'dotenv';
 dotenv.config();
-import { createServer } from "@config/express";
+import { createServer } from "./config/express";
 import http from 'http';
 import { AddressInfo } from "net";
-import * as moduleAlias from 'module-alias';
+// import * as moduleAlias from 'module-alias';
 
-const sourcePath = 'src';
-moduleAlias.addAliases({
-  '@server': sourcePath,
-  '@config': `${sourcePath}/config`,
-  '@domain': `${sourcePath}/domain`,
-  '@controller': `${sourcePath}/controller`,
-  '@middleware': `${sourcePath}/middleware`,
-});
+// const sourcePath = 'src';
+// moduleAlias.addAliases({
+//   '@server': sourcePath,
+//   '@config': `${sourcePath}/config`,
+//   '@domain': `${sourcePath}/domain`,
+//   '@controller': `${sourcePath}/controller`,
+//   '@middleware': `${sourcePath}/middleware`,
+// });
 
 const PORT: string = process.env.PORT || '4000';
 const HOST: string = process.env.HOST || '0.0.0.0';

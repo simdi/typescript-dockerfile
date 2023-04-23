@@ -1,8 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 
-import locationRouter from '@controller/location/location.router';
-import errorHandler from '@middleware/errorHandler';
+import locationRouter from '../controller/location/location.router';
+import errorHandler from '../middleware/errorHandler';
 
 const createServer = (): express.Application => {
   const app = express();
