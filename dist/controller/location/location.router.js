@@ -11,7 +11,7 @@ router.get('/user', (_req, res, next) => {
     res.send({ user: 'Simdi' });
     next();
 });
-router.get('/page', (_req, res, next) => {
+router.get('/pages', (_req, res, next) => {
     res.send('Page page');
     next();
 });
