@@ -4,15 +4,15 @@ FROM node:16 as development
 #   apt-get install -y nodejs \
 #   npm
 # Arguments 
-ARG NODE_ENV
+RUN echo APP_DIR
+ARG NODE_ENV APP_DIR
 
 # Create app directory
-ENV APP_DIR=/usr/src/api
 RUN mkdir -p $APP_DIR
 # Set working directory
 WORKDIR $APP_DIR
 # Copy all the files from our system to the container
-COPY "package.json" $APP_DIR
+COPY "package*.json" .
 # Install the package.json file.
 RUN npm install
 # Copy all other files into the image
