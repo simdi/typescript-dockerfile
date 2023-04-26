@@ -1,4 +1,4 @@
-FROM node:10.16.3-alpine as development
+FROM node:16 as development
 
 # RUN apt-get update && apt-get upgrade -y && \
 #   apt-get install -y nodejs \
@@ -23,5 +23,5 @@ RUN npm run build
 # Define the port the container should expose
 EXPOSE 4000
 # Run the build process
-CMD [ "node", "dist/index.js" ]
+CMD npm start
 
